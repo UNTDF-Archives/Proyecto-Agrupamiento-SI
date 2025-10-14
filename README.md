@@ -34,22 +34,6 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-
-
-### Dependencias incluidas:
-
-- `ucimlrepo==0.0.7` - Para obtener datasets de UCI ML Repository
-- `pandas==2.3.3` - Manipulación de datos
-- `numpy==2.3.3` - Operaciones numéricas vectorizadas
-- `psutil==7.1.0` - Monitoreo de recursos del sistema
-- `seaborn==0.13.2` - Visualización estadística
-- `matplotlib==3.10.7` - Gráficos y visualizaciones
-- `plotly==6.3.1` - Visualizaciones interactivas
-- `jupyter==1.1.1` - Metapaquete de Jupyter
-- `notebook==7.3.2` - Jupyter Notebook
-- `jupyterlab==4.3.5` - JupyterLab (interfaz más moderna)
-- `scikit-learn==1.6.1` - Machine Learning (usado para imputación de datos)
-
 ## Ejecución
 
 ### Opción 1: Jupyter Notebook
