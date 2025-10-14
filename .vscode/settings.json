@@ -1,6 +1,3 @@
 {
-    "conventionalCommits.scopes": [
-        "gower",
-        "rq"
-    ]
+    "python.defaultInterpreterPath": "${workspaceFolder}/venv"
 }

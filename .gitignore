@@ -38,7 +38,9 @@ profile_default/
 ipython_config.py
 
 # Entornos de desarrollo
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 .idea/
 *.swp
 *.swo
