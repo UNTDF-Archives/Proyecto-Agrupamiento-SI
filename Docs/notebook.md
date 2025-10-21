@@ -132,7 +132,9 @@ K-means solo funciona con variables numéricas, así que usamos:
 - capital-loss
 - hours-per-week
 
-Excluimos fnlwgt por las razones ya mencionadas.
+En la primer prueba excluimos fnlwgt por las razones ya mencionadas.
+
+Luego decidimos ordenar los datos por el peso de fnlwgt de mayor a menor, ademas juntamos las columnas capital-gain y capital-loss en una sola columna "neto" ya que estas columnas tenian muchos valores "0" que podrian afectar al analisis.
 
 ### Normalización
 
@@ -147,13 +149,9 @@ Sin normalizar, capital-gain dominaría completamente el clustering. StandardSca
 
 Probamos k=2 hasta k=10 y calculamos:
 - Silhouette Score: mide qué tan separados están los clusters
-- Davies-Bouldin Index: penaliza clusters dispersos o mal separados
 
-El k óptimo fue 4 porque:
-- Silhouette relativamente alto (~0.40)
-- Davies-Bouldin relativamente bajo (~0.82)
-- Es interpretable (no demasiados clusters)
-
+El k óptimo fue 2 porque:
+- Silhouette relativamente alto (~0.83)
 
 ---
 
@@ -263,30 +261,9 @@ Creamos varios tipos de gráficos:
 
 Creamos `utils.py` con la función `cargar_dataset_adult()` para no repetir código en cada notebook. Esto centraliza la carga de datos y facilita mantenimiento.
 
-### Configuración de VSCode
-
-El archivo `.vscode/settings.json` configura automáticamente el intérprete de Python al venv del proyecto. Esto evita problemas de "módulo no encontrado" que son comunes cuando múltiples personas trabajan en el mismo proyecto.
-
-La configuración es multiplataforma, funciona en Linux, Mac y Windows sin cambios.
-
-### Manejo de dependencias
-
-El `requirements.txt` solo incluye lo estrictamente necesario:
-- ucimlrepo: para referencia, aunque luego no la usamos
-- pandas, numpy: manipulación de datos
-- scikit-learn: algoritmos de clustering
-- psutil: medición de recursos
-- matplotlib, seaborn: visualizaciones (solo Ejercicio 7)
-- notebook: entorno Jupyter
 
 
 
-### Git y versionado
 
-El `.gitignore` excluye:
-- venv/ completo
-- Archivos temporales de Jupyter
-- Caché de Python
-- Pero incluye .vscode/settings.json para que otros puedan usar el proyecto fácilmente
 
 ---
