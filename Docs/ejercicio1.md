@@ -101,7 +101,7 @@ El dataset Adult contiene información del censo de Estados Unidos de 1994. Tien
 2. Craft-repair (técnicos): 6,112 personas
 3. Exec-managerial (ejecutivos): 6,086 personas
 4. Adm-clerical (administrativos): 5,611 personas
-5. Sales (ventas): 5,504 personas
+5. Sales (ventas): 5,504 personas   
 
 **Tipo de Empleador (workclass) - Top 3:**
 1. Private (sector privado): 33,906 personas (69.4%)
@@ -121,7 +121,7 @@ Las demás variables no tienen valores faltantes.
 ## Tratamiento de Valores Faltantes
 
 Se decidió usar imputación por moda porque:
-- El porcentaje de valores faltantes es bajo (menos del 6%)
+- El porcentaje de valores faltantes es mayor a 5%
 - Las variables son categóricas nominales
 - La moda representa el valor más común, lo que tiene sentido para estas variables
 
